@@ -19,6 +19,10 @@ class BookInfo(models.Model):
 
     name=models.CharField(max_length=10)
 
+    # 重写__str__方法以让admin来显示书籍名字
+    def __str__(self):
+        return  self.name
+
 class PeopleInfo(models.Model):
     name=models.CharField(max_length=10)
     # 性别
