@@ -15,6 +15,16 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+print(__file__)
+# D:\django练习\django_base01\bookmanage\bookmanage\settings.py
+# print(os.path.abspath(__file__))
+# D:\django练习\django_base01\bookmanage\bookmanage\settings.py
+# os.path.abspath(__file__)
+# dirname() 获取文件的目录
+
+# BASE_DIR=D:\django练习\django_base01\bookmanage\
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -23,9 +33,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ca$zsv!5gq7==+$5r$(*p=ze#$mz4(i$8#$&zy23)fn52i^4&4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 调试模式
+# 在我们开发的时候，我们需要看到更多的信息，所有要开启debug模式
+# 当我们的程序上线之后，就改为False
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 允许以什么样的形式来访问我们的项目，默认是127.0.01
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
